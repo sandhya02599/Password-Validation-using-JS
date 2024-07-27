@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password validation using JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .ss11{
+            margin-top: 300px;
+            margin-left: 700px;
+            justify-content: center;
+            border: 1px solid;
+            height: 550px;
+            width: 700px;
+            padding: 18px;
+            font-size: 30px;
+            border-radius: 20px;
+            background-color: lightcyan;
+            box-shadow: 20px 20px 20px;
+        }
+        .S{
+         width: 200px;
+         padding: 25px 30px 25px 30px;
+         background-color: lightgray;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+        }
+        .ss11 input{
+            font-size: 20px;
+            height: 40px;
+            width: 300px;
+        }
+        .ss11 button{
+            height: 90px;
+            width: 190px;
+            margin-left: 34%;
+            font-size: 20px;
+            margin-top: -10px;
+            background-color:lightgreen;
+            border-radius: 10px;
+        }
+        .ss11 button:hover{
+            background-color: lightcoral;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="ss11">
+    <form action="S">
+        <div class="New Password">
+            <h3>New Password</h3><br>
+            <input type="password" id="pass1" placeholder="Create password"><br><br>
+            <p id="ssss"></p><br>
+        </div>
+        <div class="Confirm Password">
+            <h3>Confirm Password</h3><br>
+            <input type="password" id="pass2" placeholder="Create password"><br><br>
+            <p class="Message">Both Passwords is match</p><br>
+            <button id="word">Submit</button><br>
+        </div>
+    </form>
+</div>
+<script>
+    let V1 = document.getElementById("pass1");
+    let V2 = document.getElementById("pass2");
+    let V3 = document.getElementById("ssss");
+    let V4 = document.getElementById("word");
+
+
+
+    V4.addEventListener("click",function(e){
+         e.preventDefault();
+         if(V1.value === V2.value){
+            V3.innerText = 'Your Password is correct';
+            V3.style.color = 'green';
+         }else{
+            V3.innerText = 'Your Password is wrong';
+            V3.style.color = 'red';
+         }
+
+    });
+</script>
+</body>
+</html>
